@@ -47,6 +47,8 @@ def generate_checksum(url):
     url = url.split('://', 1)
     if len(url) == 2:
         url = url[1]
+    else:
+        url = url[0]
     # remove 'www'
     if url[:4] == 'www.':
         url = url[4:]
